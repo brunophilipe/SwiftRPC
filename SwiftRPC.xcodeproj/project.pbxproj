@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1565693A1F4E385D00C8C7D3 /* RPCValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156569391F4E385D00C8C7D3 /* RPCValue.swift */; };
+		1565693B1F4E385D00C8C7D3 /* RPCValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156569391F4E385D00C8C7D3 /* RPCValue.swift */; };
+		1565693D1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565693C1F4E3A5C00C8C7D3 /* TestsConfig.swift */; };
+		1565693E1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565693C1F4E3A5C00C8C7D3 /* TestsConfig.swift */; };
 		15D069F31F4E012F0072C438 /* SwiftRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D069E91F4E012F0072C438 /* SwiftRPC.framework */; };
 		15D069F81F4E012F0072C438 /* SwiftRPCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D069F71F4E012F0072C438 /* SwiftRPCTests.swift */; };
 		15D069FA1F4E012F0072C438 /* SwiftRPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D069EC1F4E012F0072C438 /* SwiftRPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15D06A041F4E01550072C438 /* SwiftRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A031F4E01550072C438 /* SwiftRPC.swift */; };
+		15D06A051F4E01550072C438 /* SwiftRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A031F4E01550072C438 /* SwiftRPC.swift */; };
+		15D06A071F4E03FE0072C438 /* RPCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A061F4E03FE0072C438 /* RPCResult.swift */; };
+		15D06A081F4E03FE0072C438 /* RPCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A061F4E03FE0072C438 /* RPCResult.swift */; };
+		15D06A0A1F4E10600072C438 /* RPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A091F4E10600072C438 /* RPCRequest.swift */; };
+		15D06A0B1F4E10600072C438 /* RPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A091F4E10600072C438 /* RPCRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +33,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		156569391F4E385D00C8C7D3 /* RPCValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCValue.swift; sourceTree = "<group>"; };
+		1565693C1F4E3A5C00C8C7D3 /* TestsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsConfig.swift; sourceTree = "<group>"; };
 		15D069E91F4E012F0072C438 /* SwiftRPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D069EC1F4E012F0072C438 /* SwiftRPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRPC.h; sourceTree = "<group>"; };
 		15D069ED1F4E012F0072C438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D069F21F4E012F0072C438 /* SwiftRPCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRPCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D069F71F4E012F0072C438 /* SwiftRPCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRPCTests.swift; sourceTree = "<group>"; };
 		15D069F91F4E012F0072C438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15D06A031F4E01550072C438 /* SwiftRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRPC.swift; sourceTree = "<group>"; };
+		15D06A061F4E03FE0072C438 /* RPCResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCResult.swift; sourceTree = "<group>"; };
+		15D06A091F4E10600072C438 /* RPCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +88,10 @@
 			children = (
 				15D069EC1F4E012F0072C438 /* SwiftRPC.h */,
 				15D069ED1F4E012F0072C438 /* Info.plist */,
+				15D06A031F4E01550072C438 /* SwiftRPC.swift */,
+				15D06A061F4E03FE0072C438 /* RPCResult.swift */,
+				15D06A091F4E10600072C438 /* RPCRequest.swift */,
+				156569391F4E385D00C8C7D3 /* RPCValue.swift */,
 			);
 			path = SwiftRPC;
 			sourceTree = "<group>";
@@ -80,6 +99,7 @@
 		15D069F61F4E012F0072C438 /* SwiftRPCTests */ = {
 			isa = PBXGroup;
 			children = (
+				1565693C1F4E3A5C00C8C7D3 /* TestsConfig.swift */,
 				15D069F71F4E012F0072C438 /* SwiftRPCTests.swift */,
 				15D069F91F4E012F0072C438 /* Info.plist */,
 			);
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					15D069E81F4E012F0072C438 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					15D069F11F4E012F0072C438 = {
@@ -196,6 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D06A071F4E03FE0072C438 /* RPCResult.swift in Sources */,
+				1565693D1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */,
+				15D06A0A1F4E10600072C438 /* RPCRequest.swift in Sources */,
+				15D06A041F4E01550072C438 /* SwiftRPC.swift in Sources */,
+				1565693A1F4E385D00C8C7D3 /* RPCValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +229,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D06A081F4E03FE0072C438 /* RPCResult.swift in Sources */,
+				15D06A0B1F4E10600072C438 /* RPCRequest.swift in Sources */,
+				1565693B1F4E385D00C8C7D3 /* RPCValue.swift in Sources */,
+				1565693E1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */,
 				15D069F81F4E012F0072C438 /* SwiftRPCTests.swift in Sources */,
+				15D06A051F4E01550072C438 /* SwiftRPC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +365,7 @@
 		15D069FE1F4E012F0072C438 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.SwiftRPC;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +388,7 @@
 		15D069FF1F4E012F0072C438 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +410,7 @@
 		15D06A011F4E012F0072C438 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = SwiftRPCTests/Info.plist;
@@ -390,6 +425,7 @@
 		15D06A021F4E012F0072C438 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = SwiftRPCTests/Info.plist;

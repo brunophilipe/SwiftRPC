@@ -9,28 +9,50 @@
 import XCTest
 @testable import SwiftRPC
 
-class SwiftRPCTests: XCTestCase {
-    
-    override func setUp() {
+class SwiftRPCTests: XCTestCase
+{
+	private var swiftRPC: SwiftRPC!
+
+    override func setUp()
+	{
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+		// Make sure to fill out the server settings in the TestsConfig.swift file.
+		swiftRPC = SwiftRPC(username: TestsConfig.username,
+		                    password: TestsConfig.password,
+		                    host: TestsConfig.host,
+		                    port: TestsConfig.port,
+		                    url: TestsConfig.path)
     }
     
-    override func tearDown() {
+    override func tearDown()
+	{
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+	func testSimpleInvocation()
+	{
+		let expectation = XCTestExpectation(description: "Fetch info using raw invocation")
+
+		swiftRPC.invoke(method: "getblockhash", parameters: [636])
+		{
+			result in
+
+			if case .structured(let structuredResponse) = result,
+			   case .some(.value(let hashValue)) = structuredResponse.result,
+			   case .string(let hashString) = hashValue
+			{
+				XCTAssertEqual("000000008b0f1bc19009361b30547a86588b0a3a00d6f2dbbe1f744eff3cb21f", hashString)
+			}
+			else
+			{
+				XCTFail("Unexpected response from 'getblockhash 636' RPC request.")
+			}
+
+			expectation.fulfill()
+		}
+
+		wait(for: [expectation], timeout: 15.0)
+	}
 }
