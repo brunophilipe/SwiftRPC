@@ -26,12 +26,6 @@ class SwiftRPCTests: XCTestCase
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-	func testValidSettings()
-	{
-		XCTAssertNotEqual("", TestsConfig.username, "Fill the username field in the TestsConfig.swift file before running tests.")
-		XCTAssertNotEqual("", TestsConfig.password, "Fill the password field in the TestsConfig.swift file before running tests.")
-	}
     
 	func testSimpleInvocation()
 	{
