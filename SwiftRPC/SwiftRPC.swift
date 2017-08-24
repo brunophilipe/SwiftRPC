@@ -28,7 +28,7 @@ open class SwiftRPC
 	/// The JSON decoder used for all requests.
 	private let jsonDecoder = JSONDecoder()
 
-	private let urlSession = URLSession(configuration: .default)
+	internal var urlSession: URLSession
 
 	public init(username: String, password: String, host: String = "localhost", port: Int = 8332, url: String = "")
 	{
@@ -37,10 +37,12 @@ open class SwiftRPC
 		self.host = host
 		self.port = port
 		self.url = url
+
+		urlSession = URLSession(configuration: .default)
 	}
 
 	@discardableResult
-	open func invoke(method: String, parameters: [RPCValue] = [], completion: @escaping (RawResult) -> Void) -> RPCRequest?
+	open func invoke<T>(method: String, parameters: [RPCValue] = [], completion: @escaping (RPCResult<T>) -> Void) -> RPCRequest?
 	{
 		guard let url = URL(string: "http://\(host):\(port)/\(url)"),
 			  let base64Auth = "\(username):\(password)".data(using: .ascii)?.base64EncodedString() else
@@ -69,13 +71,21 @@ open class SwiftRPC
 			{
 				do
 				{
-					let structuredResponse = try self.jsonDecoder.decode(RPCResponse.self, from: data)
-					completion(.structured(structuredResponse))
+					let response = try self.jsonDecoder.decode(RPCResponse<T>.self, from: data)
+
+					if let result = response.result
+					{
+						completion(.result(result))
+					}
+					else if let error = response.error
+					{
+						completion(.error(NSError(domain: SwiftRPC.errorDomain, code: 1003, userInfo: ["code": error.code, NSLocalizedDescriptionKey: error.message])))
+					}
 				}
 				catch let error
 				{
 					print("Error: \(error.localizedDescription)")
-					completion(.data(data))
+					completion(.error(NSError(domain: SwiftRPC.errorDomain, code: 1002)))
 				}
 			}
 			else if let error = error
@@ -86,7 +96,7 @@ open class SwiftRPC
 			{
 				if httpResponse.statusCode != 200
 				{
-					completion(.badStatusError)
+					completion(.error(NSError(domain: SwiftRPC.errorDomain, code: 1001)))
 				}
 			}
 		}
@@ -104,18 +114,15 @@ open class SwiftRPC
 	}
 }
 
-public enum RawResult
+public enum RPCResult<T: Codable>
 {
 	case error(Error)
-	case structured(RPCResponse)
-	case data(Data)
-
-	internal static var badStatusError: RawResult = .error(NSError(domain: SwiftRPC.errorDomain, code: 1001))
+	case result(T)
 }
 
-public struct RPCResponse: Codable
+public struct RPCResponse<T: Codable>: Codable
 {
-	var result: RPCResult?
+	var result: T?
 	var error: RPCError?
 	var id: Int
 }

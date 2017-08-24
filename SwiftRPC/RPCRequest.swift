@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Represents an RPC request.
 open class RPCRequest
 {
 	private let task: URLSessionTask

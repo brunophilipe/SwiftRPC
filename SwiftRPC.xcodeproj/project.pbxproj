@@ -11,13 +11,15 @@
 		1565693B1F4E385D00C8C7D3 /* RPCValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156569391F4E385D00C8C7D3 /* RPCValue.swift */; };
 		1565693D1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565693C1F4E3A5C00C8C7D3 /* TestsConfig.swift */; };
 		1565693E1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565693C1F4E3A5C00C8C7D3 /* TestsConfig.swift */; };
+		156569401F4E430F00C8C7D3 /* SwiftRPC+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565693F1F4E430F00C8C7D3 /* SwiftRPC+Requests.swift */; };
+		156569411F4E430F00C8C7D3 /* SwiftRPC+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1565693F1F4E430F00C8C7D3 /* SwiftRPC+Requests.swift */; };
 		15D069F31F4E012F0072C438 /* SwiftRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D069E91F4E012F0072C438 /* SwiftRPC.framework */; };
 		15D069F81F4E012F0072C438 /* SwiftRPCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D069F71F4E012F0072C438 /* SwiftRPCTests.swift */; };
 		15D069FA1F4E012F0072C438 /* SwiftRPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D069EC1F4E012F0072C438 /* SwiftRPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15D06A041F4E01550072C438 /* SwiftRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A031F4E01550072C438 /* SwiftRPC.swift */; };
 		15D06A051F4E01550072C438 /* SwiftRPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A031F4E01550072C438 /* SwiftRPC.swift */; };
-		15D06A071F4E03FE0072C438 /* RPCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A061F4E03FE0072C438 /* RPCResult.swift */; };
-		15D06A081F4E03FE0072C438 /* RPCResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A061F4E03FE0072C438 /* RPCResult.swift */; };
+		15D06A071F4E03FE0072C438 /* RPCRawResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A061F4E03FE0072C438 /* RPCRawResult.swift */; };
+		15D06A081F4E03FE0072C438 /* RPCRawResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A061F4E03FE0072C438 /* RPCRawResult.swift */; };
 		15D06A0A1F4E10600072C438 /* RPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A091F4E10600072C438 /* RPCRequest.swift */; };
 		15D06A0B1F4E10600072C438 /* RPCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D06A091F4E10600072C438 /* RPCRequest.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +37,7 @@
 /* Begin PBXFileReference section */
 		156569391F4E385D00C8C7D3 /* RPCValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCValue.swift; sourceTree = "<group>"; };
 		1565693C1F4E3A5C00C8C7D3 /* TestsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsConfig.swift; sourceTree = "<group>"; };
+		1565693F1F4E430F00C8C7D3 /* SwiftRPC+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftRPC+Requests.swift"; sourceTree = "<group>"; };
 		15D069E91F4E012F0072C438 /* SwiftRPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D069EC1F4E012F0072C438 /* SwiftRPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRPC.h; sourceTree = "<group>"; };
 		15D069ED1F4E012F0072C438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,7 +45,7 @@
 		15D069F71F4E012F0072C438 /* SwiftRPCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRPCTests.swift; sourceTree = "<group>"; };
 		15D069F91F4E012F0072C438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D06A031F4E01550072C438 /* SwiftRPC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRPC.swift; sourceTree = "<group>"; };
-		15D06A061F4E03FE0072C438 /* RPCResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCResult.swift; sourceTree = "<group>"; };
+		15D06A061F4E03FE0072C438 /* RPCRawResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCRawResult.swift; sourceTree = "<group>"; };
 		15D06A091F4E10600072C438 /* RPCRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPCRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +92,8 @@
 				15D069EC1F4E012F0072C438 /* SwiftRPC.h */,
 				15D069ED1F4E012F0072C438 /* Info.plist */,
 				15D06A031F4E01550072C438 /* SwiftRPC.swift */,
-				15D06A061F4E03FE0072C438 /* RPCResult.swift */,
+				1565693F1F4E430F00C8C7D3 /* SwiftRPC+Requests.swift */,
+				15D06A061F4E03FE0072C438 /* RPCRawResult.swift */,
 				15D06A091F4E10600072C438 /* RPCRequest.swift */,
 				156569391F4E385D00C8C7D3 /* RPCValue.swift */,
 			);
@@ -217,9 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D06A071F4E03FE0072C438 /* RPCResult.swift in Sources */,
+				15D06A071F4E03FE0072C438 /* RPCRawResult.swift in Sources */,
 				1565693D1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */,
 				15D06A0A1F4E10600072C438 /* RPCRequest.swift in Sources */,
+				156569401F4E430F00C8C7D3 /* SwiftRPC+Requests.swift in Sources */,
 				15D06A041F4E01550072C438 /* SwiftRPC.swift in Sources */,
 				1565693A1F4E385D00C8C7D3 /* RPCValue.swift in Sources */,
 			);
@@ -229,11 +234,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D06A081F4E03FE0072C438 /* RPCResult.swift in Sources */,
+				15D06A081F4E03FE0072C438 /* RPCRawResult.swift in Sources */,
 				15D06A0B1F4E10600072C438 /* RPCRequest.swift in Sources */,
 				1565693B1F4E385D00C8C7D3 /* RPCValue.swift in Sources */,
 				1565693E1F4E3A5C00C8C7D3 /* TestsConfig.swift in Sources */,
 				15D069F81F4E012F0072C438 /* SwiftRPCTests.swift in Sources */,
+				156569411F4E430F00C8C7D3 /* SwiftRPC+Requests.swift in Sources */,
 				15D06A051F4E01550072C438 /* SwiftRPC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

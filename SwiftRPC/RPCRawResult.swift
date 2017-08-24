@@ -8,7 +8,8 @@
 
 import Foundation
 
-public enum RPCResult: Codable
+/// Represents the result field of an RPC response, which can be an individual value, an array, or a dictionary.
+public enum RPCRawResult: Codable
 {
 	case value(RPCValue)
 	case array([RPCValue])

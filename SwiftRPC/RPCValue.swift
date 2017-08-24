@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Represents a value in a JSON array/dictionary.
 public enum RPCValue: Codable
 {
 	case string(String)
