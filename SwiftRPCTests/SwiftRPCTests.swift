@@ -49,7 +49,6 @@ class SwiftRPCTests: XCTestCase
 			   case .value(let hashValue) = response,
 			   case .string(let hashString) = hashValue
 			{
-				// This test will fail if run on a coin other than Bitcoin
 				XCTAssertEqual("000000008b0f1bc19009361b30547a86588b0a3a00d6f2dbbe1f744eff3cb21f", hashString)
 			}
 			else
@@ -149,7 +148,6 @@ class SwiftRPCTests: XCTestCase
 
 			if case .result(let hashString) = result
 			{
-				// This test will fail if run on a coin other than Bitcoin
 				XCTAssertEqual("0000000000000000032099c69bec4a5b8e1da358998c7764cbc02a533c804dab", hashString)
 			}
 			else
@@ -183,7 +181,6 @@ class SwiftRPCTests: XCTestCase
 
 				if case .result(let blockCount) = result
 				{
-					// This test will fail if run on a coin other than Bitcoin
 					XCTAssertEqual(481872, blockCount)
 				}
 				else
